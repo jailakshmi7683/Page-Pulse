@@ -7,7 +7,7 @@ returned as JSON from an API, and rendered on a simple frontend.
 Built for the Digital Heroes SDE internship task kit (Role 03/16, Task A + B).
 
 **Live URL:** https://page-pulse-n14w.onrender.com
-**Repo:** _[add your GitHub link here before submitting]_
+**Repo:** https://github.com/jailakshmi7683/Page-Pulse.git
 
 ---
 
