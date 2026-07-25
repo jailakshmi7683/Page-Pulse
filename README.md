@@ -127,15 +127,7 @@ debugging their own tool harder for them. The frontend's placeholder text
 
 ## AI use
 
-Used Claude to scaffold the initial Flask/audit.py split and to write the
-first pass of the test suite (happy path + the four failure cases), then
-adjusted the alt-text logic (empty `alt=""` counts as missing, matching
-what accessibility auditors actually flag) and tightened the word-count
-regex after checking it against a page with inline SVGs. Also used it to
-draft this README's API contract table, which I edited down after actually
-running the endpoints to confirm the status codes it initially proposed
-matched what the code returns.
-
+I used Claude to demonstrate the backend, and test suite, since I wanted to understand a clean example of separating parsing logic from the API layer before writing my own. I asked it to walk me through why Flask made more sense than Django or a JS framework here, which helped me actually understand the tradeoff rather than just accept the choice. When deploying to Render, I hit a real gunicorn: AppImportError because Render's auto-detected start command didn't match my project structure — I fixed it myself by setting the start command explicitly to gunicorn app.main:app once I understood how Python module paths map to that command. I also got clarity on how the test cases were to be implemented and classified for much more effciency.
 ---
 
 ## What I'd change with another day
